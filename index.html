@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messenger Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <h2>Messenger Login</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label>Email या Mobile Number</label>
+                    <input type="text" id="username" placeholder="Email ya Number" required>
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </form>
+            <p class="footer-text">Facebook / Messenger Panel</p>
+        </div>
+    </div>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Yahan login logic hota hai, abhi ke liye seedha panel par bhej rahe hain
+            window.location.href = 'panel.html';
+        });
+    </script>
+</body>
+</html>

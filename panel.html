@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messenger Auto Sender Panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="panel-box">
+            <h2>Auto Message Sender</h2>
+            <form id="messageForm">
+                <!-- 1st Box: Name -->
+                <div class="input-group">
+                    <label>1. Aapka Naam (Target ke liye)</label>
+                    <input type="text" id="senderName" placeholder="Apna naam likhein" required>
+                </div>
+
+                <!-- 2nd Box: Target UID -->
+                <div class="input-group">
+                    <label>2. FB / Messenger UID</label>
+                    <input type="text" id="targetUID" placeholder="Jisko message bhezna hai uski UID" required>
+                </div>
+
+                <!-- 3rd Box: Message Content -->
+                <div class="input-group">
+                    <label>3. Message Box (Max 1 Lakh characters)</label>
+                    <textarea id="messageBox" maxlength="100000" rows="5" placeholder="Apna message yahan likhein..."></textarea>
+                </div>
+
+                <!-- 4th Box: TXT File Upload -->
+                <div class="input-group">
+                    <label>4. Select TXT File (Agar message box khali hai to)</label>
+                    <input type="file" id="txtFile" accept=".txt">
+                </div>
+
+                <!-- 5th Box: Delay Seconds -->
+                <div class="input-group">
+                    <label>5. Delay (Seconds mein)</label>
+                    <input type="number" id="delaySeconds" value="5" min="1">
+                </div>
+
+                <button type="submit" class="btn" id="sendBtn">Start Sending</button>
+            </form>
+            <div id="status" style="margin-top: 20px; font-weight: bold; color: #4caf50;"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
